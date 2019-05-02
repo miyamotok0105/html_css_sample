@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 
+            [head] 100px
+            [title] auto
+            [sub] auto
+            [recent] auto
+            [foot] 100px;
+    grid-row-gap: 20px;
+    row-gap: 20px;
+    /* フォントを統一 */
+    font-family: sans-serif;
+}
+
+body > * {
+    grid-column: 2 / -2;
+}
+
+header {
+    grid-row: head;
+    /* 横方向の位置揃え */
+    justify-self: center;
+    /* 縦方向の位置揃え */
+    align-self: center;
+    font-size: 40px;
+    /* google検索のカラーパレットが便利 */
+    color: #555d6b;
+}
+
+nav {
+    grid-row: head;
+    /* ナビゲーションを横に並べる */
+    justify-self: center;
+    /* end:アイテムを末端に配置 */
+    /* これがないと上の方に表示される */
+    align-self: end;
+}
+
+nav ul {
+    /* リストマークの表示を消す */
+    list-style-type: none;
+    padding: 0;
+    /* 自動でgridが入る */
+    display: grid;
+    /* gridをcolumnにすると横になる */
+    grid-auto-flow: column;
+    /* 余白を入れる */
+    grid-column-gap: 20px;
+    column-gap: 20px;
+
+}
+
+nav a {
+    color: #666666;
+    /* 下線を消す */
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ef9504;
+}
+
+figure {
+    grid-column: 1 / -1;
+    grid-row: title / span 2;
+}
+
+h1 {
+    grid-row: title;
+}
+
+p {
+    grid-row: sub;
+}
+
+section {
+    grid-row: recent;
+}
+
+footer {
+    grid-row: foot;
+}
+
