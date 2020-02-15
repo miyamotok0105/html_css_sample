@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSS3 Website Step by Step Tutorial</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    html {
+      /* 62.5% is good for calculate. 1.6rem is 16 px. */
+      font-size: 62.5%;
+    }
+    /* Website body */
+
+    body {
+      clear: both; /* Clears float value */
+      margin: 50px auto; 
+      width: 80%;
+      text-align: left;
+      background-color:#EEE; /* Sets background color to light grey */
+      font-size: 2.5rem;
+    }
+
+
+    /* Main content area - Articles and Side-bars */
+
+    .Main {    
+      background-color:#FFF; /* Sets background color to White */
+      border-radius:5px;
+      overflow: hidden;
+      line-height: 30px;
+    }
+
+    /* Article contents */
+
+    .content {  
+      padding-left:2%; 
+    }
+
+    /* Navavigation Bar */		
+
+    .pageHeader nav {
+      background: #2BA6CB; /* Sets light blue background */
+      height: 60px;  /* Sets the height to 40px, otherwise the nav bar will look like a line */
+      line-height: 30px; /* It makes the links to appear in the middle */
+      margin: 0 auto 30px auto;
+      text-align: center;
+      border-radius: 5px; /* Rounded Corner */
+      -moz-border-radius: 5px;  /* For Mozilla browsers, same rounded corner */
+      -webkit-border-radius: 5px; /* FOr Safari 5 and below, same rounded corner */
+    }
+      
+    .pageHeader nav ul { 
+      margin: 0 auto;
+    }
+
+    /* Styles for Links */
+
+    .pageHeader nav ul li {  
+      float: left;  
+      display: inline;   /* Makes the links to display horizontally */ 
+    }
+      
+    .pageHeader nav a:link, .pageHeader nav a:visited {
+      color: #fff;   /* Sets the color of the links to white */
+      display: inline-block;  /* Makes the links to be displays as blocks */
+      height: 30px;
+      padding: 5px 23px;  /* Sets space between links */
+      text-decoration: none;
+    }
+
+    .pageHeader nav a:hover, .pageHeader nav a:active,
+    .pageHeader nav .active a:link, .pageHeader nav .active a:visited {
+      background: #2795B6; /* Changes the background color to dark blue */
+      color: #fff;
+    }
+
+    /* Main Content */
+
+    .Main {
+      overflow: hidden;
+      line-height: 30px;
+    }
+
+    .Top {
+      margin-bottom: 3%;
+    }
+
+    .content {
+      width: 70%;
+      float: left;
+    }
+
+    /* Side-bar Navigation */		
+
+    .top-sidebar {          /* Style applied to the Side-bar */
+      width: 20%;
+      float: left;
+      margin-left: 2%;
+      padding: 2% 3%;
+      margin-bottom: 2%;
+    }
+
+    .navigation {       /* Style applied to the navigation list */
+      display: block;
+        list-style-position: inside; 
+        list-style-type: none;  /* Removes the bullets */
+        margin: 0;
+        padding: 0.875em 0; 
+    }
+
+    /* Featured Panel */		
+
+    .bottom-sidebar {   /* Style applied to side-bar */
+      width: 20%;
+      float: left;
+      margin-left: 2%;
+      padding: 2% 3%;
+    }
+
+    .featured {   /* Style applied to featured panel */
+      background: none repeat scroll 0 0 #F2F2F2;
+        border-color: #D9D9D9;
+        border-style: solid;
+        border-width: 1px;
+        margin-bottom: 1.25em;
+        padding: 1.25em; 
+    }
+      
+    /* Footer */	
+
+    /* Styles are mostly same as pageHeader */
+
+    .pageFooter {     /* Style applied to footer bar */
+      width: 100%;
+      height:60px;
+      line-height:5px;
+      float: left;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      background-color: #2BA6CB;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;	
+      color: #FFF;	
+    }
+
+    .pageFooter p {  /* Style applied to content inside footer bar */
+      width: 90%;
+      margin: 2% auto;
+    }
+  </style>
+</head>
+
+<body class="body">
+	<header class="pageHeader">
+		<nav><ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul></nav>
+	</header>
+		
+	<div class="Main">
+		<div class="content">	
+		<article class="Top">	
+			<header>
+        <h2><a href="#">ここがヘッダーだよー１</a></h2>
+			</header>
+			<footer>
+        <h5><i>フッターだよー１</i></h5>
+			</footer>
+			<content>
+        <p>コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ</p>
+        <p>コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ</p>
+      </content>
+		</article>
+
+		<article class="Bottom">
+			<header>
+        <h2><a href="#">ここがヘッダーだよー2</a></h2>
+			</header>
+			<footer>
+        <h5><i>フッターだよー2</i></h5>
+			</footer>
+			<content>
+        <p>コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ</p>
+        <p>コンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツコンテンツ</p>
+      </content>
+
+		</article>
+	</div>
+			
+		<aside class="top-sidebar">
+			<h2>Navigation</h2>
+			<ul class="navigation">
+			<li><a href="">Home</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">About Us</a></li>
+			<li><a href="">Contact Us</a></li>
+			</ul>
+		</aside>
+			
+		<aside class="bottom-sidebar">
+			<div class="featured">
+        <h2>Featured</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod expedita distinctio.</p>
+        <a href="">Read More >></a>
+      </div>
+
+      <h5><a href="../../twitter-bootstrap-tutorial.html">Twitter Boostrap Framework</a></h5>
+      <ul class="side-nav tut">
+        <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-grid-system.html">Grid System</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-components.html">Twitter Bootstrap Framework Components</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-js-components.html">Twitter Bootstrap Framework JS Components</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-tourist-spot-example-website.html">Tourist Spots</a></li>
+            <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-game-site-example-website.html">Games Site</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-social-app-example-website.html">Social App</a></li>		
+            <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-template.html" >Bootstrap Template</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/twitter-bootstrap-wordpress-theme.html">Bootstrap Wordpress Theme</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/adding-plugins-in-bootstrap.html" >Bootstrap Plugins</a></li>
+        <li><a href="../../twitter-bootstrap-tutorial/bootstrap-with-less.html">Bootstrap with LESS</a></li>		
+      </ul>
+		</aside>
+	</div>
+	
+	<footer class="pageFooter">
+		<p>Copyright © 2013 - www.ieatcss.com</p>
+	</footer>
+
+</body>
+</html>
